@@ -2,6 +2,9 @@ import React from 'react'
 
 import Image from 'next/image';
 
+import PlanButton from '../../../components/PlanButton';
+import SaveButton from '../../../components/SaveButton';
+
 const getExercise = async(id)=>{
 
     try{
@@ -132,12 +135,14 @@ const WorkoutDetails = async({params}) => {
                             </div>
 
                             <div className="mt-7 flex flex-wrap gap-3">
-                                <button type="button" className="flex items-center gap-2 rounded-md bg-[#c8ff00] px-5 py-3 text-[9px] font-bold text-black transition hover:bg-[#b5e600]">
+                                <PlanButton workout={exercise} />
+                                <SaveButton workout={exercise} />
+                                {/* <button type="button" className="flex items-center gap-2 rounded-md bg-[#c8ff00] px-5 py-3 text-[9px] font-bold text-black transition hover:bg-[#b5e600]">
                                     <span>▣</span>Add to todays plan
                                 </button>
                                 <button type="button" className="flex items-center gap-2 rounded-md border border-[#30353c] bg-transparent px-5 py-3 text-[9px] font-medium text-gray-400 transition hover:border-gray-500 hover:text-white">
                                     <span>♡</span>Save for later
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>

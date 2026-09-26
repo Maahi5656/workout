@@ -1,38 +1,38 @@
 import React from 'react'
 
-const PlanCard = () => {
+const PlanCard = ({workout}) => {
     return (
         <div className="group flex flex-col gap-4 rounded-xl border border-[#252a31] bg-[#15181d] p-3 transition hover:border-[#353b44] sm:flex-row sm:items-center">
             <div className="h-[70px] w-full shrink-0 overflow-hidden rounded-lg sm:h-[64px] sm:w-[80px]">
-                <img src="https://api.abcz.workers.dev/images/fitlog/pull-up.jpg" alt="Pull Up" className="h-full w-full object-cover"/>
+                <img src={workout.image} alt="Pull Up" className="h-full w-full object-cover"/>
             </div>
             {/* Workout Information */}
         
             <div className="min-w-0 flex-1">
                 <h2 className="truncate text-[11px] font-black uppercase text-white">
-                    Pull-Up
+                    {workout.name}
                 </h2>
                 <p className="mt-1 text-[8px] text-gray-500">
-                    Pull-up Bar
+                    {workout.equipment}
                 </p>
                 <div className="mt-2 flex flex-wrap items-center gap-3">
                     <span className="flex items-center gap-1 text-[8px] text-gray-500">
                         <span className="text-[#c8ff00]">
                             ◷
                         </span>
-                        15 min
+                        {workout.duration}
                     </span>
                     <span className="flex items-center gap-1 text-[8px] text-gray-500">
                         <span className="text-[#c8ff00]">
                             ◆
                         </span>
-                        120 kcal
+                        {workout.caloriesBurned}
                     </span>
                     <span className="flex items-center gap-1 text-[8px] text-gray-500">
                         <span className="text-[#c8ff00]">
                             ★
                         </span>
-                        4.7
+                        {workout.rating}
                     </span>
                 </div>
             </div>

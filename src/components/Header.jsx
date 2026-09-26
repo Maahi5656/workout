@@ -1,13 +1,20 @@
+"use client"
+
 import React from 'react'
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { useContext } from 'react';
+
+import { WorkoutContext } from '../context/WorkoutContext';
 
 import logo from '../assets/logo.png'
 
 const Header = () => {
-    
+
+    const { planWorkout, setPlanWorkout, saveWorkout, setSaveWorkout } = useContext(WorkoutContext);
+     
     return (
         <div className="navbar fixed top-0 bg-[#0C0D10] text-[#9CA3AF] shadow-sm z-999">
           <div className="navbar-start">
@@ -34,8 +41,8 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Button</a>
-             <a className="btn">Button</a>
+            <p className='font-[14px]text-2xl text-[#9CA3AF] px-2'>Plan ({planWorkout.length})</p>
+             <p className='font-[14px]text-2xl text-[#9CA3AF] px-2'>Saved ({saveWorkout.length})</p>
           </div>
         </div>
     )

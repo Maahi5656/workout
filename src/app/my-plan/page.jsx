@@ -98,7 +98,7 @@ const PlanningWork = () => {
                             <span className="text-[9px] text-gray-500">
                                 Sort By
                             </span>
-                            <select value={sortBy} onChange={(e)=>setSortBy(e.target.value)} className="rounded-md border border-[#30353c] bg-[#15181d] px-3 py-2 text-[9px] text-gray-400 outline-none" defaultValue="duration">
+                            <select value={sortBy} onChange={(e)=>setSortBy(e.target.value)} className="rounded-md border border-[#30353c] bg-[#15181d] px-3 py-2 text-[9px] text-gray-400 outline-none" defaultValue={"duration"}>
                                 <option value={"duration"}>Duration</option>
                                 <option value={"calories"}>Calories</option>
                                 <option value={"rating"}>Rating</option>
