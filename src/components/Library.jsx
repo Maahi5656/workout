@@ -2,7 +2,7 @@ import ExerciseCard from './ExerciseCard'
 
 const getExercise = async () => {
     try {
-        const response = await fetch('https://YOUR-DOMAIN.com/workoutData.json')
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/workoutData.json`)
 
         if (!response.ok) {
             throw new Error(`Failed to fetch exercises: ${response.status}`)
