@@ -1,25 +1,28 @@
 import React from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
-const ExerciseCard = () => {
+const ExerciseCard = ({exercise}) => {
     return (
         <>
-            <div className="card bg-base-100 w-96 shadow-sm">
-              <figure>
-                <Image src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" width={250} height={250} alt="Shoes" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">
-                  Card Title
-                  <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                  <div className="badge badge-outline">Fashion</div>
-                  <div className="badge badge-outline">Products</div>
-                </div>
-              </div>
+            <div className="card bg-base-100 w-[32%] shadow-sm">
+                <Link href={`workout/${exercise.id}`} >
+                    <figure>
+                      <Image src={exercise.image} width={100} height={250} alt="Shoes" style={{width:"100%"}} />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title">
+                          { exercise.name }
+                        {/* <div className="badge badge-secondary">NEW</div> */}
+                      </h2>
+                      <p>{ exercise.description }</p>
+                      <div className="card-actions justify-end">
+                        <div className="badge badge-outline">Fashion</div>
+                        <div className="badge badge-outline">Products</div>
+                      </div>
+                    </div>
+                </Link>
             </div>
         </>
     )
