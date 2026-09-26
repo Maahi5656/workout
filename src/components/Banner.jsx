@@ -7,8 +7,8 @@ import bannerImage from '../assets/banner.png'
 const Banner = () => {
     return (
         <>
-            <div className="container-fluid flex items-center justify-center relative top-[76px] mt-[48px]">
-                <div className='flex justify-between items-center bg-[#15171D] p-[56px] rounded w-[95%]'>
+            <div className="relative top-[76px] flex items-center justify-center relative top-[76px] mt-[48px]">
+                <div className='flex justify-between items-center bg-[#15171D] p-[56px] rounded w-[100%] mx-[15px]'>
                     <div>
                         <small className='text-[12px] font-bold text-[#C2F800] uppercase mb-3'>Workout Library</small>
                         <h1 className='text-[40px] font-extrabold text-[#fff] mb-3.5 uppercase '>Train With Intent. Log<br/>Every Set.</h1>

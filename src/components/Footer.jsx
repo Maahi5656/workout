@@ -7,7 +7,7 @@ import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <>
-        <div className='fixed w-[100%] bottom-0 py-[40px] px-[15px] bg-[#090A0D]'>
+        <div className='relative top-[76px] w-[100%] py-[40px] px-[15px] bg-[#090A0D]'>
             <div className="container">
                 <div className="flex justify-between items-center">
                     <Image src={logo} width={25} height={25} alt='logo' />
