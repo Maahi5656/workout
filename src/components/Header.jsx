@@ -19,7 +19,7 @@ const Header = () => {
                 tabIndex={-1}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]'  href="/">Workout</Link></li>
-                <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]' href="/">My Plan</Link></li>
+                <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]' href="/my-plan">My Plan</Link></li>
               </ul>
             </div>
             <a className="btn btn-ghost text-xl">
@@ -30,7 +30,7 @@ const Header = () => {
             <ul className="menu menu-horizontal px-1">
               <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]' href="/">Workout</Link></li>
 
-              <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]' href="/">My Plan</Link></li>
+              <li><Link className='font-[14px] text-2xl text-[#9CA3AF] hover:text-[#C2F800]' href="/my-plan">My Plan</Link></li>
             </ul>
           </div>
           <div className="navbar-end">

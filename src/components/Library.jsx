@@ -5,7 +5,7 @@ import ExerciseCard from './ExerciseCard'
 const getExercise = async()=>{
 
     try{
-        const response = await fetch('https://api.abcz.workers.dev/api/fitlog');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/workoutData.json`);
         const data = await response.json();
 
         return data;

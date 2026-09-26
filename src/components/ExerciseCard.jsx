@@ -9,7 +9,7 @@ const ExerciseCard = ({exercise}) => {
             <div className="card bg-base-100 w-[32%] shadow-sm">
                 <Link href={`workout/${exercise.id}`} >
                     <figure>
-                      <Image src={exercise.image} width={100} height={250} alt="Shoes" style={{width:"100%"}} />
+                      <Image src={exercise.image} width={100} height={250} alt={exercise.name} style={{width:"100%"}} />
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const getExercise = async(id)=>{
 
     try{
-        const response = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/workoutData.json`);
         const data = await response.json();
         
         return data;
@@ -18,9 +18,9 @@ const getExercise = async(id)=>{
 const WorkoutDetails = async({params}) => {
 
     const { id } = await params;
-    const exercise = await getExercise(id);
+    const exerciseData = await getExercise();
 
-    // const exercises = exerciseData.find((exercise)=>exercise.id === id)
+    const exercise = exerciseData.find((exercise)=>String(exercise.id) === String(id))
 
     return (
         <>
